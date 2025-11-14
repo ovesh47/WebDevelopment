@@ -5,6 +5,8 @@
 # Allow the Project 1 folder and its contents
 !/Project1/
 !/Project1/**
+!/Project2/
+!/Project2/**
 # Optional: ignore system/editor files
 .DS_Store
 .vscode/
