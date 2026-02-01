@@ -1,0 +1,119 @@
+               <!--DOM Project-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>DOM Project</title>
+               <!-- CSS Styles -->
+  <style>
+    p {
+      font-family: 'Roboto', Arial;
+      font-size: 18px;
+      text-align: justify;
+    }
+    .Youtube, .Amazon {
+      margin: 20px;
+    }
+.subscribebutton {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.subscribedbutton {
+  background-color: rgb(231, 229, 229);
+  color: black;}
+.itemPrice {
+  font-family: 'Roboto', Arial;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.calculatebutton {
+  font-family: 'Roboto', Arial;
+  font-size: 16px;
+  padding: 11px;
+  background-color: rgb(16, 172, 53);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.totalCost {
+  color: white;
+  display: block;
+  
+}
+.highlight {
+  background-color: rgb(74, 131, 244);
+  display: inline-block;
+}
+  </style>
+</head>
+<body>
+            <!-- YouTube Subscribe Button -->
+  <div class="Youtube">
+  <p>
+   <b> YouTube Subscribe Button: </b>
+  </p>
+  <button class="subscribebutton" onclick="subscribe()">
+    Subscribe
+  </button>
+  </div>
+          <!-- Amazon Shipping Calculator -->
+  <div class="Amazon">
+  <p>
+  <b>  Amazon Shipping Calculator: </b>
+  <br>
+    Orders under $40 = +$10 shipping
+  <br>
+    Orders over $40 = FREE shipping
+  </p>
+  <input class="itemPrice" onkeydown="handleCostkeydown(event)" placeholder="Cost of order">
+  <button class="calculatebutton" onclick="handleCalculateKeybutton(event)">
+    Calculate
+  </button>
+  <p class="totalCost">
+  </p>
+  </div>
+               <!-- JavaScript Code -->
+  <script>
+    function handleCostkeydown(event) {
+      const inputElement = document.querySelector('.itemPrice');
+      if(event.key === 'Enter' && inputElement.value.trim() !== '' && !isNaN(inputElement.value.trim()) && Number(inputElement.value.trim()) > 0) {calculateTotal();}
+      else if (event.key ==='Enter'){alert('Please enter a valid number');}
+    }
+    function handleCalculateKeybutton(event) {
+      const inputElement = document.querySelector('.itemPrice');
+      if(inputElement.value.trim() !== ''&& !isNaN(inputElement.value.trim()) && Number(inputElement.value.trim()) > 0) {calculateTotal();}
+      else {alert('Please enter a valid number');}
+    }
+    function calculateTotal() {
+      const inputElement = document.querySelector('.itemPrice');
+      let cost = Number(inputElement.value);
+      if (cost < 40) {
+        cost = cost + 10;
+      }
+      document.querySelector('.totalCost').innerHTML = `<span class="highlight">Total Cost: $${cost}</span>`;
+    }
+    function subscribe() {
+      const  buttonElement = document.querySelector('.subscribebutton');
+      if (buttonElement.innerText === 'Subscribe') {
+        buttonElement.innerText = 'Subscribed';
+        buttonElement.classList.add('subscribedbutton');
+      } else {
+        buttonElement.innerText = 'Subscribe';
+        buttonElement.classList.remove('subscribedbutton');
+      }
+    }
+  </script>
+</body>
+</html>
