@@ -9,6 +9,8 @@
 !/Project2/**
 !/otherProjects/
 !/otherProjects/**
+!/Project3/
+!/Project3/**
 # Optional: ignore system/editor files
 .DS_Store
 .vscode/

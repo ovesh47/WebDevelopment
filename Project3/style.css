@@ -1,0 +1,49 @@
+/* CSS file for Rock-Paper-Scissors Game */
+.general {
+  background-color: #191919;
+  color: white;
+  font-family: Arial;
+  margin: 8px;
+}
+.resetButton {
+  padding: 8px 16px;
+  border: none; 
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  cursor: pointer;
+}
+.heading {
+  font-size: 30px;
+  font-weight: bold;
+}
+.moves {
+  cursor: pointer;
+  background-color: transparent;
+  border: white 3px solid;
+  color: white;
+  font-size: 15px;
+  border-radius: 100%;
+  width: 120px;
+  height: 120px;
+  margin-right: 10px;
+
+}
+.icon {
+  height: 50px;
+}
+.gameResults {
+  margin-top: 50px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.scoreDisplay {
+  margin-top: 60px;
+}
+.movesPicked {
+  margin-top: 40px;
+}
+.iconl{
+  height: 50px;
+}
+

@@ -1,12 +1,13 @@
 # WebDevelopment
 
 A collection of beginner front-end web development projects built using HTML, CSS, and JavaScript.  
-This repository contains two practice project folders (`Project1` and `Project2`) that showcase responsive layout and interactive UI concepts.
+This repository contains three practice project folders (`Project1`, `Project2` & `Project3`) that showcase responsive layout and interactive UI concepts.
 
 ## Projects Included
 Each folder includes a small web project:
 - **Project1** – It is a non-functional look a like of youtube homepage.  
-- **Project2** – it is a small ToDo WebApp with some basic features.
+- **Project2** – It is a small ToDo WebApp with some basic features.
+- **Project3** – It is a simple RPS game against computer.
 
 ## Tech Used
 This repo uses:

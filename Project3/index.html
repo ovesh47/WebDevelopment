@@ -1,0 +1,48 @@
+<!-- HTML for Rock-Paper-Scissors Game -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS and Font Link -->
+    <link rel="stylesheet" href="style.css">
+  <title>
+    RPS Game
+  </title>
+</head>
+<body class="general">
+  <p class="heading">
+    Rock Paper Scissors
+  </p>
+  <button class="moves" onclick="
+    playGame ('Rock')
+  ">
+    <img class= "icon" src="Icons/rock.png" alt="Rock">
+  </button>
+  <button class="moves" onclick="
+    playGame ('Paper')
+  ">
+    <img class= "icon" src="Icons/paper.png" alt="Paper">
+  </button>
+  <button class="moves" onclick="
+    playGame ('Scissors')
+  ">
+    <img class= "icon" src="Icons/scissors.png" alt="Scissors">
+  </button>
+  <p class="gameResults"></p>
+  <p class="movesPicked"></p>
+  <p class="scoreDisplay"></p>
+  <button 
+    class = "resetButton"
+    onclick="
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    updateScoreDisplay();
+  ">
+    Reset Score
+  </button>
+  <!-- JavaScript Link -->
+  <script src="script.js"></script>
+</body>
+</html>
