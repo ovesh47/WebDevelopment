@@ -2,7 +2,7 @@
 *
 # But keep .gitignore itself
 !.gitignore
-# Allow the Project 1 folder and its contents
+# Allow the Projects
 !/Project1/
 !/Project1/**
 !/Project2/
